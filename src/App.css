@@ -1,0 +1,58 @@
+body {
+    background-color: #ffffff;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    background-color: #00994d;
+    padding: 10px 20px;
+}
+
+nav {
+    float: right;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+main {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.artist {
+    font-size: 18px;
+}
+
+.song {
+    font-size: 16px;
+}
+
+.button {
+    background-color: #00994d;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.player-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
