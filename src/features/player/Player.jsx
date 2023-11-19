@@ -1,8 +1,11 @@
 import { RiVolumeDownLine, RiVolumeMuteLine, RiVolumeUpLine } from 'react-icons/ri';
 import { usePlayer } from '../hooks/usePlayer';
 import { formatTime } from '../lib/format-time';
+import { useRef } from "react";
 
 function Player() {
+    const audioEl = useRef();
+
     const {
         playing,
         currentSong,
