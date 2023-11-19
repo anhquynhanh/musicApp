@@ -2,7 +2,7 @@ import { songs } from "../data/songs";
 import { usePlayer } from "../hooks/usePlayer";
 
 function PlayList() {
-    const { currentSong } = usePlayer();
+    const { currentSong, onChooseSong } = usePlayer();
 
     return (
         <div>
@@ -15,8 +15,10 @@ function PlayList() {
                         style={{
                             display: 'flex',
                             alignItems: 'center',
-                            background: currentSong.id === song.id ? 'pink' : 'none'
+                            background: currentSong.id === song.id ? 'pink' : 'none',
+                            cursor: 'pointer'
                         }}
+                        onClick={() => onChooseSong(song)}
                     >
                         <div>
                             <img
