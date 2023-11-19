@@ -6,7 +6,7 @@ import PlayList from './features/playlist/PlayList'
 function App() {
 
   return (
-    <PlayerProvider>
+    <PlayerProvider className="player-container">
       <PlayList />
       <Player />
     </PlayerProvider>
