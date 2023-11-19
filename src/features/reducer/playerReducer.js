@@ -82,7 +82,7 @@ export const playerReducer = (state, action) => {
             };
         }
 
-        case PLAYER.SET_SONGS: {
+        case PLAYER.SET_SONG: {
             const songIndex = songs.findIndex(
                 song => song.id === action.payload.song.id,
             );
@@ -96,4 +96,4 @@ export const playerReducer = (state, action) => {
             throw new Error(`Invalid action ${action.type}`);
         }
     }
-}
+};
