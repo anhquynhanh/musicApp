@@ -12,22 +12,30 @@ export const usePlayer = () => {
     useEffect(() => {
         const audioEl = audioRef.current;
 
-        if (!audioEl) return;
+        if (!audioEl) {
+            console.warn('null');
+            return;
+        };
 
         if (playing) {
-            audioEl.play();
+            audioEl.play().catch(error => console.error(error));
         } else {
             audioEl.pause();
         }
-    }, [playing, currentSongIndex]);
+    }, [playing, currentSongIndex, audioRef]);
 
     useEffect(() => {
         const audioEl = audioRef.current;
 
-        if (playing && audioEl.paused) {
-            audioEl.play();
+        if (!audioEl) {
+            console.warn('null');
+            return;
         }
-    }, [playing, currentTime]);
+
+        if (playing && audioEl.paused) {
+            audioEl.play().catch(error => console.error(error));
+        }
+    }, [playing, currentTime, audioRef]);
 
     const handlePlay = () => {
         dispatch({ type: PLAYER.PLAY });
